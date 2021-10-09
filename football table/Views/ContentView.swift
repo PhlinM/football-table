@@ -32,16 +32,15 @@ struct ContentView: View {
     
     @ViewBuilder
     var fetchButton: some View {
-        Button {
-            viewModel.getLeague()
-        } label: {
-            if viewModel.isFetching {
-                ProgressView()
-            } else {
+        if viewModel.isFetching {
+            ProgressView()
+        } else {
+            Button {
+                viewModel.getLeague()
+            } label: {
                 Text("Fetch data")
             }
         }
-        .padding(.bottom)
     }
     
     var sortMenu: some View {

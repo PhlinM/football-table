@@ -10,12 +10,14 @@ import SwiftUI
 
 class ViewModel: ObservableObject {
     
+    // MARK: Published varibles
     @Published private(set) var league: League?
     @Published private(set) var isFetching = false
     
-    private let session = URLSession(configuration: .default)
+    // MARK: Private varible
     private let apiToken = "7cfa6f09cc7a4ff0bf3950072d578984"
     
+    // MARK: - Intents
     func sort(by sortType: SortType) {
         league?.sort(by: sortType)
     }
@@ -30,7 +32,8 @@ class ViewModel: ObservableObject {
         }
     }
     
-    func getData(completionHandeler: @escaping (League?) -> Void) {
+    // MARK: Football API connection
+    private func getData(completionHandeler: @escaping (League?) -> Void) {
         
         guard let url = URL(string: "https://api.football-data.org/v2/competitions/PL/standings")
         else { return }
@@ -38,7 +41,8 @@ class ViewModel: ObservableObject {
         var request = URLRequest(url: url)
         request.setValue(apiToken, forHTTPHeaderField: "X-Auth-Token")
         
-        session.dataTask(with: request) { data, reponse, error in
+        URLSession(configuration: .default)
+            .dataTask(with: request) { data, reponse, error in
             
             if let error = error {
                 print("Error: \(error.localizedDescription)")

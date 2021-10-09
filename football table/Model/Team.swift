@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Team: Decodable, Identifiable {
+struct Team: Identifiable {
     let id: Int
     let name: String
     var won: Int
     var draw: Int
     var lost: Int
     var position: Int
-    
+}
+
+extension Team: Decodable {
     enum CodingKeys: String, CodingKey {
         case team, position, won, draw, lost
     }

@@ -42,6 +42,7 @@ struct TeamView: View {
 struct LeagueTableView_Previews: PreviewProvider {
     static var previews: some View {
         TeamView(team: League.example.teams[0])
+            .padding()
             .previewLayout(.sizeThatFits)
         LeagueTableView(league: League.example)
     }

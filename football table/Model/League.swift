@@ -8,18 +8,18 @@
 import Foundation
 
 enum SortType: String, CaseIterable, Identifiable {
-    case win, lost, draw, position
+    case won, lost, draw, position, name
     
     var id: String { self.rawValue }
 }
 
-struct League: Decodable {
+struct League {
     var teams: [Team]
     
     mutating func sort(by sortType: SortType) {
         var predicate: (Team, Team) -> Bool {
             switch sortType {
-            case .win:
+            case .won:
                 return { $0.won > $1.won }
             case .lost:
                 return { $0.lost > $1.lost }
@@ -27,11 +27,16 @@ struct League: Decodable {
                 return { $0.draw > $1.draw }
             case .position:
                 return { $0.position < $1.position }
+            case .name:
+                return { $0.name < $1.name }
             }
         }
         
         teams.sort(by: predicate)
     }
+}
+
+extension League: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case standings
