@@ -24,14 +24,16 @@ struct TeamView: View {
         VStack {
             HStack {
                 Text(team.name)
+                    .bold()
                 Spacer()
             }
             
             HStack {
                 Text("\(team.won) won")
-                Text("\(team.draw) draw")
-                Text("\(team.lost) lost")
                 Spacer()
+                Text("\(team.draw) draw")
+                Spacer()
+                Text("\(team.lost) lost")
             }
         }
     }
