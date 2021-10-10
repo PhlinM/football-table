@@ -34,12 +34,12 @@ struct ContentView: View {
     var fetchButton: some View {
         if viewModel.isFetching {
             ProgressView()
+                .accessibilityIdentifier("Progress View")
         } else {
-            Button {
+            Button("Fetch data") {
                 viewModel.getLeague()
-            } label: {
-                Text("Fetch data")
             }
+            .accessibilityIdentifier("Fetch Data Button")
         }
     }
     
@@ -49,12 +49,13 @@ struct ContentView: View {
                 Button(sortType.rawValue) {
                     viewModel.sort(by: sortType)
                 }
+                .accessibilityIdentifier("Sort \(sortType.rawValue) button")
             }
         } label: {
             Label("Sort", systemImage: "arrow.up.arrow.down")
                 .labelStyle(.iconOnly)
         }
-        
+        .accessibilityIdentifier("Sort Menu")
     }
 }
 

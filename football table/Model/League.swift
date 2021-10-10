@@ -13,7 +13,7 @@ enum SortType: String, CaseIterable, Identifiable {
     var id: String { self.rawValue }
 }
 
-struct League {
+struct League: Equatable {
     var teams: [Team]
     
     mutating func sort(by sortType: SortType) {

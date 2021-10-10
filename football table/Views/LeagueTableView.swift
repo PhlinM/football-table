@@ -13,7 +13,7 @@ struct LeagueTableView: View {
     var body: some View {
         List(league.teams) {
             TeamView(team: $0)
-        }
+        }.accessibilityIdentifier("Team list")
     }
 }
 

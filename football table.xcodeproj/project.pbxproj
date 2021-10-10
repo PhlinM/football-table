@@ -13,13 +13,14 @@
 		52AD6CDD270DBFAF0012608F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AD6CDC270DBFAF0012608F /* Preview Assets.xcassets */; };
 		52AD6CE7270DBFB00012608F /* football_tableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6CE6270DBFB00012608F /* football_tableTests.swift */; };
 		52AD6CF1270DBFB00012608F /* football_tableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6CF0270DBFB00012608F /* football_tableUITests.swift */; };
-		52AD6CF3270DBFB00012608F /* football_tableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6CF2270DBFB00012608F /* football_tableUITestsLaunchTests.swift */; };
 		52AD6D04270F16F40012608F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D03270F16F30012608F /* Team.swift */; };
 		52AD6D06270F173B0012608F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D05270F173B0012608F /* ViewModel.swift */; };
 		52AD6D08271200680012608F /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D07271200680012608F /* League.swift */; };
 		52AD6D0C2712123A0012608F /* Example.json in Resources */ = {isa = PBXBuildFile; fileRef = 52AD6D0B2712123A0012608F /* Example.json */; };
 		52AD6D0E271226A90012608F /* LeagueExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D0D271226A90012608F /* LeagueExample.swift */; };
 		52AD6D10271229250012608F /* LeagueTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D0F271229250012608F /* LeagueTableView.swift */; };
+		52AD6D1F271383790012608F /* DecodeDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D1E271383790012608F /* DecodeDataTests.swift */; };
+		52AD6D2127138C320012608F /* viewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD6D2027138C310012608F /* viewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +50,14 @@
 		52AD6CE6270DBFB00012608F /* football_tableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = football_tableTests.swift; sourceTree = "<group>"; };
 		52AD6CEC270DBFB00012608F /* football tableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "football tableUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AD6CF0270DBFB00012608F /* football_tableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = football_tableUITests.swift; sourceTree = "<group>"; };
-		52AD6CF2270DBFB00012608F /* football_tableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = football_tableUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52AD6D03270F16F30012608F /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		52AD6D05270F173B0012608F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		52AD6D07271200680012608F /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		52AD6D0B2712123A0012608F /* Example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Example.json; sourceTree = "<group>"; };
 		52AD6D0D271226A90012608F /* LeagueExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueExample.swift; sourceTree = "<group>"; };
 		52AD6D0F271229250012608F /* LeagueTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableView.swift; sourceTree = "<group>"; };
+		52AD6D1E271383790012608F /* DecodeDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeDataTests.swift; sourceTree = "<group>"; };
+		52AD6D2027138C310012608F /* viewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,8 @@
 		52AD6CE5270DBFB00012608F /* football tableTests */ = {
 			isa = PBXGroup;
 			children = (
+				52AD6D2027138C310012608F /* viewModelTests.swift */,
+				52AD6D1E271383790012608F /* DecodeDataTests.swift */,
 				52AD6CE6270DBFB00012608F /* football_tableTests.swift */,
 			);
 			path = "football tableTests";
@@ -138,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				52AD6CF0270DBFB00012608F /* football_tableUITests.swift */,
-				52AD6CF2270DBFB00012608F /* football_tableUITestsLaunchTests.swift */,
 			);
 			path = "football tableUITests";
 			sourceTree = "<group>";
@@ -315,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AD6CE7270DBFB00012608F /* football_tableTests.swift in Sources */,
+				52AD6D2127138C320012608F /* viewModelTests.swift in Sources */,
+				52AD6D1F271383790012608F /* DecodeDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52AD6CF3270DBFB00012608F /* football_tableUITestsLaunchTests.swift in Sources */,
 				52AD6CF1270DBFB00012608F /* football_tableUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

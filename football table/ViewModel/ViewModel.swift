@@ -69,3 +69,11 @@ class ViewModel: ObservableObject {
         }.resume()
     }
 }
+
+// MARK: Extension for testing purposes
+
+extension ViewModel {
+    func setLeauge(league: League?) {
+        self.league = league
+    }
+}

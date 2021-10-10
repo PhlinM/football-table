@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team: Identifiable {
+struct Team: Identifiable, Equatable {
     let id: Int
     let name: String
     var won: Int
