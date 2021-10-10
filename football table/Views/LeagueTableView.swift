@@ -25,15 +25,19 @@ struct TeamView: View {
             HStack {
                 Text(team.name)
                     .bold()
+                    .accessibilityIdentifier("Team name")
                 Spacer()
             }
             
             HStack {
                 Text("\(team.won) won")
+                    .accessibilityIdentifier("Team wins")
                 Spacer()
                 Text("\(team.draw) draw")
+                    .accessibilityIdentifier("Team draws")
                 Spacer()
                 Text("\(team.lost) lost")
+                    .accessibilityIdentifier("Team losses")
             }
         }
     }
