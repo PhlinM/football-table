@@ -4,6 +4,7 @@
 //
 //  Created by Flynn Milton on 06/10/2021.
 //
+// Football data provided by the Football-Data.org API
 
 import SwiftUI
 

@@ -4,6 +4,7 @@
 //
 //  Created by Flynn Milton on 07/10/2021.
 //
+// Football data provided by the Football-Data.org API
 
 import Foundation
 import SwiftUI
@@ -32,7 +33,7 @@ class ViewModel: ObservableObject {
         }
     }
     
-    // MARK: Football API connection
+    // MARK: Football data provided by the Football-Data.org API
     private func getData(completionHandeler: @escaping (League?) -> Void) {
         
         guard let url = URL(string: "https://api.football-data.org/v2/competitions/PL/standings")

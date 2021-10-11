@@ -4,6 +4,7 @@
 //
 //  Created by Flynn Milton on 06/10/2021.
 //
+// Football data provided by the Football-Data.org API
 
 import SwiftUI
 
@@ -12,14 +13,22 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Group {
+            VStack {
+                Text("Football data provided by the Football-Data.org API")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
                 if let league = viewModel.league {
                     LeagueTableView(league: league)
                 } else {
                     Text("No data")
                 }
+                
+                Spacer()
             }
-            .navigationBarHidden(true)
+            .navigationTitle("Premier League")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     fetchButton
