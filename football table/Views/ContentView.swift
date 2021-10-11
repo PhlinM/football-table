@@ -14,6 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Text("Matches from the last 30 days")
+                    .font(.title2)
+                
                 Text("Football data provided by the Football-Data.org API")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -28,7 +31,7 @@ struct ContentView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Premier League")
+            .navigationBarHidden(true)
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     fetchButton
